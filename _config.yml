@@ -1,0 +1,32 @@
+title: "EcoPlace.by - База знаний по экологии"
+email: "info@ecoplace.by"
+description: "Экологичная жизнь в Беларуси: статьи, советы, инструкции"
+baseurl: ""
+url: "https://ecoplace.by"
+
+# Для базы знаний используем коллекции
+collections:
+  knowledge:
+    output: true
+    permalink: /:collection/:path/
+
+# Настройки сборки
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Плагины
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Безопасность - отключаем удаленные темы
+remote_theme: null
+theme: minima
+
+# Деплой на сервер
+deploy:
+  target: server
+  server: ecoplace.by
+  path: /var/www/ecoplace
