@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoPlace.by - Скоро открытие!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%);
+            color: #2e7d32;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .container {
+            max-width: 800px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(46, 125, 50, 0.1);
+            border: 2px solid #4caf50;
+        }
+        
+        .logo {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #2e7d32;
+        }
+        
+        .logo span {
+            color: #4caf50;
+        }
+        
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #1b5e20;
+        }
+        
+        .tagline {
+            font-size: 1.3em;
+            color: #388e3c;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+        
+        .status {
+            background: #f1f8e9;
+            border-left: 4px solid #4caf50;
+            padding: 15px;
+            margin: 25px 0;
+            text-align: left;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .feature {
+            background: #e8f5e9;
+            padding: 15px;
+            border-radius: 10px;
+            flex: 1;
+            min-width: 200px;
+            transition: transform 0.3s;
+        }
+        
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact {
+            background: #2e7d32;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        
+        .contact:hover {
+            background: #1b5e20;
+        }
+        
+        .leaf {
+            font-size: 4em;
+            margin-bottom: 20px;
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+            
+            .logo {
+                font-size: 2.5em;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="leaf">🌱</div>
+    
+    <div class="container">
+        <div class="logo">Eco<span>Place</span>.by</div>
+        
+        <h1>Скоро открытие!</h1>
+        
+        <p class="tagline">
+            Мы создаем платформу для экологичного образа жизни в Беларуси. 
+            Здесь будут экотовары, мероприятия, полезные советы и сообщество единомышленников.
+        </p>
+        
+        <div class="status">
+            <strong>Текущий статус:</strong> Идет разработка проекта. Мы активно работаем над созданием лучшей экоплатформы.
+        </div>
+        
+        <div class="features">
+            <div class="feature">
+                <strong>🛒 Экотовары</strong>
+                <p>Экологичные товары от проверенных поставщиков</p>
+            </div>
+            <div class="feature">
+                <strong>📅 Мероприятия</strong>
+                <p>Экопросветительские события и акции</p>
+            </div>
+            <div class="feature">
+                <strong>🌿 Сообщество</strong>
+                <p>Объединяем людей для заботы о природе</p>
+            </div>
+        </div>
+        
+        <p>Следите за обновлениями! Мы скоро запустимся.</p>
+        
+        <a href="https://t.me/+hvLYruRsE8hkNmEy" class="contact">Связаться с нами</a>
+    </div>
+    
+    <script>
+        // Простой счетчик дней
+        const launchDate = new Date('2026-07-01');
+        const today = new Date();
+        const daysLeft = Math.ceil((launchDate - today) / (1000 * 60 * 60 * 24));
+        
+        if (daysLeft > 0) {
+            document.querySelector('.status').innerHTML += 
+                `<br><br><strong>До запуска:</strong> примерно ${daysLeft} дней`;
+        }
+        
+        // Анимация листочков
+        const leaf = document.querySelector('.leaf');
+        setInterval(() => {
+            leaf.style.animation = 'none';
+            setTimeout(() => {
+                leaf.style.animation = 'float 3s ease-in-out infinite';
+            }, 10);
+        }, 3000);
+    </script>
+</body>
+</html>
